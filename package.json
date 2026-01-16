@@ -1,0 +1,100 @@
+{
+  "name": "use-pinch-zoom",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A React hook for intuitive pinch-to-zoom and drag gestures on images",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "vite",
+    "dev:lib": "tsup --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "test:storybook": "test-storybook",
+    "test:storybook:ci": "concurrently -k -s first -n \"SB,TEST\" \"npm run storybook -- --ci\" \"wait-on tcp:6006 && npm run test:storybook\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "spell": "cspell \"**/*\"",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run spell",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "pinch",
+    "zoom",
+    "gesture",
+    "image",
+    "viewer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "@use-gesture/react": ">=10.0.0",
+    "@radix-ui/react-dialog": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@radix-ui/react-dialog": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@storybook/addon-essentials": "^8.4.0",
+    "@storybook/addon-interactions": "^8.4.0",
+    "@storybook/addon-links": "^8.4.0",
+    "@storybook/blocks": "^8.4.0",
+    "@storybook/react": "^8.4.0",
+    "@storybook/react-vite": "^8.4.0",
+    "@storybook/test": "^8.4.0",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@use-gesture/react": "^10.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "happy-dom": "^15.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@storybook/test-runner": "^0.21.0",
+    "concurrently": "^9.0.0",
+    "playwright": "1.49.0",
+    "cspell": "^8.17.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-storybook": "^0.11.0",
+    "globals": "^15.14.0",
+    "http-server": "^14.1.0",
+    "prettier": "^3.4.0",
+    "storybook": "^8.4.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.18.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0",
+    "wait-on": "^8.0.0"
+  }
+}

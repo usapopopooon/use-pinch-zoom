@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "pinch",
+    "unpinch",
+    "picsum",
+    "radix",
+    "tsup",
+    "vitest",
+    "vitejs",
+    "storybook",
+    "peerDependencies",
+    "devDependencies",
+    "esmodule",
+    "ecmaversion",
+    "outdir",
+    "rootdir",
+    "preact",
+    "uall"
+  ],
+  "ignorePaths": ["node_modules", "dist", "storybook-static", "package-lock.json", "*.md"],
+  "enableFiletypes": ["typescript", "typescriptreact", "json", "yaml"]
+}
